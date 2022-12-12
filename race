@@ -1,0 +1,16 @@
+/*Code starts, estaremos organizando una carrera de la siguiente forma basandonos en su edad y orden de llegada, los mayores de edad que hayan llegado temprano correran a las 9:30AM, los mayores de edad que se hayan inscrito tarde comenzararn a las 11:00AM y los menores de edad sin importar el tiempo de registro correran a las 12:30PM*/
+let raceNumber = Math.floor(Math.random() * 1000);//Asignamos un numero de carrera randomizado
+let early = false //Llego temprano?
+let age = 18
+if(early && age >= 18){
+  raceNumber += 1000;
+}
+if(early && age >= 18){/*Corroboramos si es mayor de edad y llego temprano*/
+  console.log(`Tu carrera empieza a las 9:30AM, Tu numero de corredor es: ${raceNumber}.`);
+}
+else if(!early && age >= 18){/*En caso de no llegar temprano*/
+  console.log(`Tu carrera empieza a las 11:00AM, Tu numero de corredor es: ${raceNumber}`);
+}
+else if(age < 18){/*Menores de edad*/
+  console.log(`Tu carrera empieza a las 12:30PM, Tu numero de corredor es: ${raceNumber}.`)
+}
